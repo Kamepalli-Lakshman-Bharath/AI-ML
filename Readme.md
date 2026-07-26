@@ -7,18 +7,26 @@ Welcome to the **AI/ML Learning Hub**! This documentation collection contains st
 ## 📚 Table of Contents
 
 ### 1. Fundamentals & Core Concepts
+* 📄 **[01. Introduction to Machine Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/01-introduction-to-ai-ml.md)**
+  * What is Machine Learning?
+  * Traditional Programming vs. Machine Learning
+  * Everyday & Industrial Applications
+  * AI vs. ML vs. AGI
+  * Economic Impact & Value Creation
 
-- 📄 **[01. Introduction to Machine Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/01-introduction-to-ai-ml.md)**
-  - What is Machine Learning?
-  - Traditional Programming vs. Machine Learning
-  - Everyday & Industrial Applications
-  - AI vs. ML vs. AGI
-  - Economic Impact & Value Creation
+* 📄 **[Supervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/supervised-learning.md)**
+  * $X \longrightarrow Y$ Input-to-Output Mappings
+  * 7 Industry $X \to Y$ Applications Table
+  * **Regression**: Continuous numerical output prediction
+  * Housing Price Prediction case study (Linear vs Curve fitting)
+
+* 📄 **[Supervised and Unsupervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/supervised-and-unsupervised-learning.md)**
+  * Overview of Supervised & Unsupervised Learning paradigms
+  * Summary Comparison Matrix
 
 ---
 
 ## 💡 How to Use These Notes
-
 1. **Read Conceptually**: Follow the structured breakdown and real-world analogies.
 2. **Review Diagrams**: Check the flow diagrams to visualize how data transforms into models.
 3. **Practice Implementation**: Work through the practical code snippets provided in subsequent sections.
