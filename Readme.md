@@ -17,12 +17,13 @@ Welcome to the **AI/ML Learning Hub**! This documentation collection contains st
 * 📄 **[Supervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/supervised-learning.md)**
   * $X \longrightarrow Y$ Input-to-Output Mappings
   * 7 Industry $X \to Y$ Applications Table
-  * **Regression**: Continuous numerical output prediction
-  * Housing Price Prediction case study (Linear vs Curve fitting)
+  * **Regression**: Continuous numerical output prediction (Housing Price case study slide replica)
+  * **Classification**: Discrete category prediction (Breast Cancer case study, Decision Boundaries)
 
-* 📄 **[Supervised and Unsupervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/supervised-and-unsupervised-learning.md)**
-  * Overview of Supervised & Unsupervised Learning paradigms
-  * Summary Comparison Matrix
+* 📄 **[Unsupervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/unsupervised-learning.md)**
+  * Unlabeled Data ($X \text{ only}$, no $y$ labels)
+  * Supervised vs Unsupervised Data SVG Comparison
+  * **Clustering**: Definition & 3 Case Studies (Google News aggregation, Genetic Microarray DNA analysis, Customer Market Segmentation)
 
 ---
 
