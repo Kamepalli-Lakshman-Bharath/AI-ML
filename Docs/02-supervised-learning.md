@@ -33,7 +33,7 @@ $$\text{Inference: } \text{New Input } X_{\text{new}} \xrightarrow{\quad f(X_{\t
 
 **Regression** algorithms predict a continuous numerical value from **infinitely many possible numbers**.
 
-$$\text{Output Space } Y \in \mathbb{R} \quad (\text{e.g., } \$150,000, \$183,420, \$200,000)$$
+$$\text{Output Space } Y \in \mathbb{R} \quad (\text{e.g., } 150,000, 183,420, 200,000)$$
 
 ### 🏠 Case Study: Housing Price Prediction (Mental Model)
 

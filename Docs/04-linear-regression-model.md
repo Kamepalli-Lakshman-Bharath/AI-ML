@@ -33,7 +33,7 @@ $$f_{w,b}(x) = w \cdot x + b \quad \text{or simply} \quad f(x) = wx + b$$
 |   y    <-- The TRUE actual target value from historical training data.           |
 |   ŷ    <-- The ESTIMATED prediction calculated by the model function f(x).        |
 |                                                                                   |
-| Example: Actual sale price y = $400k; Model prediction ŷ = $390k.                 |
+| Example: Actual sale price y = $400,000; Model prediction ŷ = $390,000.           |
 +-----------------------------------------------------------------------------------+
 ```
 
@@ -62,8 +62,8 @@ The dataset used to train a model is called the **Training Set**. Standard mathe
 | Symbol / Notation | Term | Definition | Portland Dataset Example |
 | :--- | :--- | :--- | :--- |
 | **$x$** | Input Feature / Variable | The input attribute provided to the model | House size (e.g., $2104\text{ sq ft}$) |
-| **$y$** | Target Variable / True Label | The actual true value in the training set | True house price (e.g., $\$400,000$) |
-| **$\hat{y}$** ("y-hat") | Estimated Prediction | The output computed by model $f(x)$ | Predicted price (e.g., $\$220,000$) |
+| **$y$** | Target Variable / True Label | The actual true value in the training set | True house price (e.g., $400,000) |
+| **$\hat{y}$** ("y-hat") | Estimated Prediction | The output computed by model $f(x)$ | Predicted price (e.g., $220,000) |
 | **$m$** | Total Training Examples | Total number of rows / data points in dataset | $m = 47$ training examples |
 | **$(x, y)$** | Single Training Example | A single ordered pair of input and true output | $(2104, 400)$ |
 | **$(x^{(i)}, y^{(i)})$** | $i^{\text{th}}$ Training Example | The specific pair at row index $i$ in data table | Row 1: $(x^{(1)}, y^{(1)}) = (2104, 400)$ |
