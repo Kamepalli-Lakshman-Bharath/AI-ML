@@ -78,5 +78,5 @@ $$\text{Unlabeled Data } (X) \longrightarrow \text{Discovered Structure / Cluste
 | :--- | :--- | :--- |
 | **Output Type** | Continuous number ($\mathbb{R}$) | Discrete class label |
 | **Output Space** | Infinitely many numbers | Small, finite set |
-| **Target Example** | Price ($\$250\text{k}$), Temperature ($72^\circ\text{F}$) | Spam (0/1), Medical diagnosis |
+| **Target Example** | Price ($250,000), Temperature (72°F) | Spam (0/1), Medical diagnosis |
 | **Goal** | Fit a trend line/curve | Find a decision boundary |
