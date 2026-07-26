@@ -10,58 +10,7 @@ $$\text{Supervised Learning: } \{(X_1, y_1), (X_2, y_2), \dots, (X_m, y_m)\} \im
 
 $$\text{Unsupervised Learning: } \{X_1, X_2, \dots, X_m\} \implies \text{Discovers Structure / Patterns in } X$$
 
-```
-+-----------------------------------------------------------------------------------+
-| SUPERVISED DATA (Labeled)                 | UNSUPERVISED DATA (Unlabeled)         |
-|                                           |                                       |
-|  Age (X2)                                 |  Age (X2)                             |
-|    ^                                      |    ^                                  |
-|    |   O   O   |   X   X                  |    |   *   *       *   *              |
-|    | O   O     | X   X                    |    | *   *       *   *                |
-|    +----------------------> Size (X1)     |    +----------------------> Size (X1) |
-|    Labels: Benign (O), Malignant (X)      |    Labels: NONE (Raw inputs X only)   |
-+-----------------------------------------------------------------------------------+
-```
-
-<svg viewBox="0 0 620 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #e0e0e0; border-radius:8px; padding:12px; font-family: sans-serif;">
-  <!-- Supervised Plot -->
-  <g transform="translate(10,0)">
-    <text x="140" y="30" fill="#0070f3" font-size="14" font-weight="bold" text-anchor="middle">Supervised Data (Labeled Y)</text>
-    <line x1="40" y1="210" x2="240" y2="210" stroke="#000" stroke-width="2"/>
-    <line x1="40" y1="210" x2="40" y2="50" stroke="#000" stroke-width="2"/>
-    
-    <!-- Benign O -->
-    <circle cx="80" cy="170" r="6" fill="none" stroke="#0070f3" stroke-width="2"/>
-    <circle cx="100" cy="140" r="6" fill="none" stroke="#0070f3" stroke-width="2"/>
-    <circle cx="120" cy="180" r="6" fill="none" stroke="#0070f3" stroke-width="2"/>
-
-    <!-- Malignant X -->
-    <path d="M 170 80 L 182 92 M 182 80 L 170 92" stroke="#ff0000" stroke-width="2.5"/>
-    <path d="M 190 110 L 202 122 M 202 110 L 190 122" stroke="#ff0000" stroke-width="2.5"/>
-    <path d="M 210 70 L 222 82 M 222 70 L 210 82" stroke="#ff0000" stroke-width="2.5"/>
-    
-    <line x1="145" y1="50" x2="155" y2="210" stroke="#70a800" stroke-width="2" stroke-dasharray="4,4"/>
-  </g>
-
-  <!-- Unsupervised Plot -->
-  <g transform="translate(320,0)">
-    <text x="140" y="30" fill="#70a800" font-size="14" font-weight="bold" text-anchor="middle">Unsupervised Data (No Labels Y)</text>
-    <line x1="40" y1="210" x2="240" y2="210" stroke="#000" stroke-width="2"/>
-    <line x1="40" y1="210" x2="40" y2="50" stroke="#000" stroke-width="2"/>
-
-    <!-- Cluster 1 (Unlabeled dots) -->
-    <ellipse cx="100" cy="160" rx="35" ry="30" fill="#89b4fa" fill-opacity="0.2" stroke="#0070f3" stroke-dasharray="3,3"/>
-    <circle cx="80" cy="170" r="5" fill="#333"/>
-    <circle cx="100" cy="140" r="5" fill="#333"/>
-    <circle cx="115" cy="175" r="5" fill="#333"/>
-
-    <!-- Cluster 2 (Unlabeled dots) -->
-    <ellipse cx="195" cy="95" rx="35" ry="30" fill="#a6e3a1" fill-opacity="0.2" stroke="#70a800" stroke-dasharray="3,3"/>
-    <circle cx="180" cy="90" r="5" fill="#333"/>
-    <circle cx="195" cy="115" r="5" fill="#333"/>
-    <circle cx="210" cy="80" r="5" fill="#333"/>
-  </g>
-</svg>
+![Supervised vs Unsupervised Data Representation](./assets/images/supervised_vs_unsupervised.svg)
 
 ---
 
