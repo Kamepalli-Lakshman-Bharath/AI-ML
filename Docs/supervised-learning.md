@@ -40,20 +40,62 @@ $$\text{Output Space } Y \in \mathbb{R} \quad (\text{e.g., } \$150,000, \$183,42
 * **Input ($X$)**: House size (sq ft)
 * **Target ($Y$)**: House price ($k)
 
-```
-  Price ($k)
-    ^
-200 |                       *  <-- (Fitted Curve Prediction: ~$200k)
-150 |             *       /
-    |     *            --'    <-- (Fitted Line Prediction: ~$150k)
-100 |  *     _..---'
- 50 |     .-'
-  0 +-----------------------------------> Size (sq ft)
-    0     500    750    1000   1250
-```
+<svg viewBox="0 0 620 330" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#1e1e2e; border-radius:8px; padding:12px;">
+  <!-- Grid Lines -->
+  <line x1="80" y1="240" x2="570" y2="240" stroke="#45475a" stroke-dasharray="4"/>
+  <line x1="80" y1="180" x2="570" y2="180" stroke="#45475a" stroke-dasharray="4"/>
+  <line x1="80" y1="120" x2="570" y2="120" stroke="#45475a" stroke-dasharray="4"/>
+  <line x1="80" y1="60"  x2="570" y2="60"  stroke="#45475a" stroke-dasharray="4"/>
 
-* **Linear Regression**: Fits a straight line ($y = wx + b$). For $750\text{ sq ft}$, predicts $\sim\$150,000$.
-* **Non-Linear Regression**: Fits a curve. For $750\text{ sq ft}$, predicts $\sim\$200,000$.
+  <!-- Axes -->
+  <line x1="80" y1="260" x2="570" y2="260" stroke="#cdd6f4" stroke-width="2"/>
+  <line x1="80" y1="260" x2="80"  y2="40"  stroke="#cdd6f4" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="325" y="300" fill="#cdd6f4" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">House Size (sq ft)</text>
+  <text x="25" y="150" fill="#cdd6f4" font-family="sans-serif" font-size="14" transform="rotate(-90 25,150)" text-anchor="middle" font-weight="bold">Price ($ in thousands)</text>
+
+  <!-- Axis Ticks & Numbers -->
+  <text x="80"  y="280" fill="#a6adc8" font-size="12" text-anchor="middle">0</text>
+  <text x="195" y="280" fill="#a6adc8" font-size="12" text-anchor="middle">500</text>
+  <text x="310" y="280" fill="#a6adc8" font-size="12" text-anchor="middle" font-weight="bold">750</text>
+  <text x="425" y="280" fill="#a6adc8" font-size="12" text-anchor="middle">1000</text>
+  <text x="540" y="280" fill="#a6adc8" font-size="12" text-anchor="middle">1250</text>
+
+  <text x="65" y="244" fill="#a6adc8" font-size="12" text-anchor="end">$50k</text>
+  <text x="65" y="184" fill="#a6adc8" font-size="12" text-anchor="end">$100k</text>
+  <text x="65" y="124" fill="#a6adc8" font-size="12" text-anchor="end">$150k</text>
+  <text x="65" y="64"  fill="#a6adc8" font-size="12" text-anchor="end">$200k</text>
+
+  <!-- Data Points -->
+  <circle cx="150" cy="225" r="5" fill="#f38ba8"/>
+  <circle cx="220" cy="195" r="5" fill="#f38ba8"/>
+  <circle cx="280" cy="155" r="5" fill="#f38ba8"/>
+  <circle cx="360" cy="115" r="5" fill="#f38ba8"/>
+  <circle cx="440" cy="85"  r="5" fill="#f38ba8"/>
+  <circle cx="510" cy="75"  r="5" fill="#f38ba8"/>
+
+  <!-- Linear Fit Line (Blue) -->
+  <line x1="80" y1="245" x2="540" y2="85" stroke="#89b4fa" stroke-width="2.5" stroke-dasharray="6,4"/>
+
+  <!-- Curve Fit Path (Green) -->
+  <path d="M 80 250 Q 280 200 540 65" fill="none" stroke="#a6e3a1" stroke-width="3"/>
+
+  <!-- Vertical Reference Line at 750 sq ft -->
+  <line x1="310" y1="260" x2="310" y2="50" stroke="#fab387" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Prediction Points -->
+  <!-- Linear Fit @ 750 sq ft (~$150k) -->
+  <circle cx="310" cy="165" r="6" fill="#89b4fa"/>
+  <text x="322" y="170" fill="#89b4fa" font-size="12" font-weight="bold">Linear Fit (~$150,000)</text>
+
+  <!-- Curve Fit @ 750 sq ft (~$200k) -->
+  <circle cx="310" cy="115" r="6" fill="#a6e3a1"/>
+  <text x="322" y="112" fill="#a6e3a1" font-size="12" font-weight="bold">Curve Fit (~$200,000)</text>
+</svg>
+
+* **Linear Regression**: Fits a straight line ($y = wx + b$). For $750\text{ sq ft}$, predicts $\approx \$150,000$.
+* **Non-Linear Regression**: Fits a curve (e.g. polynomial). For $750\text{ sq ft}$, predicts $\approx \$200,000$.
 
 ---
 
@@ -80,7 +122,7 @@ $$\text{Output Space } Y \in \{0, 1, \dots, K-1\} \quad (\text{Discrete Classes 
 
 #### A) Single Input Feature ($X = \text{Tumor Size}$)
 
-Data points plotted along a 1D line using symbols: $\mathbf{O}$ for Benign ($0$) and $\mathbf{X}$ for Malignant ($1$).
+Data points plotted along a 1D line using symbols: **O** for Benign ($0$) and **X** for Malignant ($1$).
 
 ```
 Diagnosis (Y)
@@ -94,17 +136,39 @@ Diagnosis (Y)
 
 When multiple features are provided, the classification algorithm fits a **Decision Boundary** line to separate the categories in multi-dimensional feature space.
 
-```
-   Age (X2)
-     ^
-     |      O      O    |    X      X
-     |    O      O      |  X      X    (Malignant X)
-     |       O          |     X
-     |    O      O      |  X      X
-     |                  | (Decision Boundary Line)
-     |  (Benign O)      |
-     +-----------------------------------------> Tumor Size (X1)
-```
+<svg viewBox="0 0 600 300" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#1e1e2e; border-radius:8px; padding:12px;">
+  <!-- Axes -->
+  <line x1="70" y1="240" x2="540" y2="240" stroke="#cdd6f4" stroke-width="2"/>
+  <line x1="70" y1="240" x2="70"  y2="30"  stroke="#cdd6f4" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="300" y="280" fill="#cdd6f4" font-family="sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Tumor Size (X1)</text>
+  <text x="25" y="135" fill="#cdd6f4" font-family="sans-serif" font-size="14" transform="rotate(-90 25,135)" text-anchor="middle" font-weight="bold">Patient Age (X2)</text>
+
+  <!-- Benign Data Points (Circles - O) -->
+  <circle cx="120" cy="200" r="8" fill="none" stroke="#89b4fa" stroke-width="2.5"/>
+  <circle cx="160" cy="170" r="8" fill="none" stroke="#89b4fa" stroke-width="2.5"/>
+  <circle cx="140" cy="120" r="8" fill="none" stroke="#89b4fa" stroke-width="2.5"/>
+  <circle cx="210" cy="190" r="8" fill="none" stroke="#89b4fa" stroke-width="2.5"/>
+  <circle cx="200" cy="140" r="8" fill="none" stroke="#89b4fa" stroke-width="2.5"/>
+  <circle cx="240" cy="80"  r="8" fill="none" stroke="#89b4fa" stroke-width="2.5"/>
+
+  <!-- Malignant Data Points (Crosses - X) -->
+  <path d="M 330 65 L 344 79 M 344 65 L 330 79" stroke="#f38ba8" stroke-width="3"/>
+  <path d="M 380 110 L 394 124 M 394 110 L 380 124" stroke="#f38ba8" stroke-width="3"/>
+  <path d="M 350 150 L 364 164 M 364 150 L 350 164" stroke="#f38ba8" stroke-width="3"/>
+  <path d="M 420 80 L 434 94 M 434 80 L 420 94" stroke="#f38ba8" stroke-width="3"/>
+  <path d="M 440 160 L 454 174 M 454 160 L 440 174" stroke="#f38ba8" stroke-width="3"/>
+  <path d="M 480 120 L 494 134 M 494 120 L 480 134" stroke="#f38ba8" stroke-width="3"/>
+
+  <!-- Decision Boundary Line -->
+  <line x1="280" y1="30" x2="300" y2="240" stroke="#a6e3a1" stroke-width="3.5" stroke-dasharray="6,4"/>
+
+  <!-- Region Labels -->
+  <text x="160" y="50" fill="#89b4fa" font-size="13" font-weight="bold">Benign Region (O)</text>
+  <text x="380" y="50" fill="#f38ba8" font-size="13" font-weight="bold">Malignant Region (X)</text>
+  <text x="315" y="210" fill="#a6e3a1" font-size="12" font-weight="bold">Decision Boundary</text>
+</svg>
 
 > 🧬 **Multi-Feature Vectors**: Industrial medical AI systems use high-dimensional feature vectors: 
 > $$X = [\text{Tumor Size}, \text{Patient Age}, \text{Clump Thickness}, \text{Cell Size Uniformity}, \text{Cell Shape Uniformity}]$$
@@ -119,9 +183,3 @@ When multiple features are provided, the classification algorithm fits a **Decis
 | **Output Space** | Infinitely many possible numbers | Small, finite set ($\{0,1\}$ or $\{0,1,2\}$) |
 | **Target Examples** | House price, temperature, stock price | Spam/Not Spam, Benign/Malignant, Cat/Dog |
 | **Model Goal** | Fit a trend line or curve to data | Fit a decision boundary separating classes |
-
----
-
-- [x] **Supervised Learning**: $X \to Y$ input-to-output mappings.
-- [x] **Regression**: Predicts continuous numbers.
-- [x] **Classification**: Predicts discrete categories using decision boundaries across single or multiple features.
