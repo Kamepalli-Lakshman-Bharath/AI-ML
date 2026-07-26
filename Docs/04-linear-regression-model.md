@@ -1,4 +1,4 @@
-# Linear Regression Model & Standard Notation
+# 04. Linear Regression Model & Standard Notation
 
 > **Core Concept**: **Linear Regression** is a Supervised Learning algorithm that fits a straight line to historical data to predict continuous numerical outputs ($y$). It is the foundational model for predictive analytics in Machine Learning.
 

@@ -14,19 +14,19 @@ Welcome to the **AI/ML Learning Hub**! This documentation collection contains st
   * AI vs. ML vs. AGI
   * Economic Impact & Value Creation
 
-* 📄 **[Supervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/supervised-learning.md)**
+* 📄 **[02. Supervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/02-supervised-learning.md)**
   * $X \longrightarrow Y$ Input-to-Output Mappings
   * 7 Industry $X \to Y$ Applications Table
   * **Regression**: Continuous numerical output prediction
   * **Classification**: Discrete category prediction (Breast Cancer case study, Decision Boundaries)
 
-* 📄 **[Unsupervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/unsupervised-learning.md)**
+* 📄 **[03. Unsupervised Learning](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/03-unsupervised-learning.md)**
   * Unlabeled Data ($X \text{ only}$, no $y$ labels)
   * **Clustering**: Definition & 3 Case Studies (Google News, Genetics, Customer Segmentation)
   * **Anomaly Detection** & **Dimensionality Reduction**
   * Supervised vs Unsupervised Quiz Matrix
 
-* 📄 **[Linear Regression Model & Notation](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/linear-regression-model.md)**
+* 📄 **[04. Linear Regression Model & Notation](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/04-linear-regression-model.md)**
   * Straight Line Model Fitting
   * Portland Housing Dataset Case Study ($x = 1250 \to \hat{y} \approx \$220k$)
   * Standard ML Notation Reference ($x, y, m, (x^{(i)}, y^{(i)})$)

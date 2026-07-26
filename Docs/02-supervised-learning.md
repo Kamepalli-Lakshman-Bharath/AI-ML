@@ -1,4 +1,4 @@
-# Supervised Learning
+# 02. Supervised Learning
 
 > **Core Concept**: Supervised Learning algorithms learn input-to-output ($X \longrightarrow Y$) mappings. The algorithm is provided with training data containing both the input $X$ and the correct target label $Y$ ("the right answer"). Once trained, it predicts output $Y$ for new, unseen input $X$.
 

@@ -1,4 +1,4 @@
-# Unsupervised Learning: Clustering, Anomaly Detection & Dimensionality Reduction
+# 03. Unsupervised Learning: Clustering, Anomaly Detection & Dimensionality Reduction
 
 > **Core Concept**: Unsupervised Learning algorithms process data containing **inputs $X$ only (no target output labels $y$)**. The algorithm's objective is to autonomously discover hidden structures, patterns, anomalies, or compressed representations in the data without human supervision.
 
