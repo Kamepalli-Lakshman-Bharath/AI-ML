@@ -40,7 +40,7 @@ $$\text{Output Space } Y \in \mathbb{R} \quad (\text{e.g., } 150,000, 183,420, 2
 * **Input ($X$)**: House size in feet²
 * **Target ($Y$)**: House price in $1000's
 
-![Housing Price Prediction Regression](./assets/images/housing_price_regression.svg)
+![Housing Price Prediction Regression](./assets/images/housing_price_regression.png)
 
 #### How to Read This Mental Model:
 1. **Training Data ($X, Y$)**: Each red cross ($\mathbf{X}$) represents a historical house sale (Size on X-axis, Price on Y-axis).
@@ -88,7 +88,7 @@ Diagnosis (Y)
 
 When multiple features are provided, the classification algorithm fits a **Decision Boundary** line to separate the categories in multi-dimensional feature space.
 
-![Breast Cancer Classification](./assets/images/breast_cancer_classification.svg)
+![Breast Cancer Classification](./assets/images/breast_cancer_classification.png)
 
 > 🧬 **Multi-Feature Vectors**: Industrial medical AI systems use high-dimensional feature vectors: 
 > $$X = [\text{Tumor Size}, \text{Patient Age}, \text{Clump Thickness}, \text{Cell Size Uniformity}, \text{Cell Shape Uniformity}]$$

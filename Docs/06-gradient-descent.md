@@ -13,7 +13,7 @@ Imagine standing at a high point on a hilly landscape (the cost surface $J(w,b)$
 3. **Take a small step ($\alpha$)** in that direction.
 4. **Repeat steps 1–3** until you reach the bottom of the valley (a minimum where slope = 0).
 
-![Gradient Descent Intuition](./assets/images/gradient_descent_intuition.svg)
+![Gradient Descent Intuition](./assets/images/gradient_descent_intuition.png)
 
 ---
 
@@ -40,7 +40,7 @@ $$b = b - \alpha \frac{\partial}{\partial b} J(w,b)$$
 
 When implementing Gradient Descent in code, **both parameters $w$ and $b$ MUST be updated simultaneously** using their pre-update values.
 
-![Simultaneous Updates vs Incorrect Updates](./assets/images/simultaneous_updates.svg)
+![Simultaneous Updates vs Incorrect Updates](./assets/images/simultaneous_updates.png)
 
 ### Correct vs. Incorrect Python Code:
 
@@ -62,7 +62,7 @@ b = b - alpha * d_db  # Incorrectly uses NEW w inside derivative for b
 
 The derivative term $\frac{\partial}{\partial w} J(w)$ provides the direction of movement toward the minimum:
 
-![Derivative Slope Intuition](./assets/images/derivative_slope_intuition.svg)
+![Derivative Slope Intuition](./assets/images/derivative_slope_intuition.png)
 
 | Initial Position | Tangent Slope ($\frac{\partial J}{\partial w}$) | Gradient Update Formula | Parameter Movement | Effect on Cost $J(w)$ |
 | :--- | :--- | :--- | :--- | :--- |
@@ -76,7 +76,7 @@ The derivative term $\frac{\partial}{\partial w} J(w)$ provides the direction of
 
 ## ⚡ 5. Learning Rate ($\alpha$) Choice & Dynamics
 
-![Effects of Learning Rate Alpha](./assets/images/learning_rate_dynamics.svg)
+![Effects of Learning Rate Alpha](./assets/images/learning_rate_dynamics.png)
 
 * **$\alpha$ Too Small (e.g., $0.0000001$)**:
   * Takes minuscule baby steps.

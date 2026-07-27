@@ -10,7 +10,7 @@ $$\text{Supervised Learning: } \{(X_1, y_1), (X_2, y_2), \dots, (X_m, y_m)\} \im
 
 $$\text{Unsupervised Learning: } \{X_1, X_2, \dots, X_m\} \implies \text{Discovers Structure / Patterns in } X$$
 
-![Supervised vs Unsupervised Data Representation](./assets/images/supervised_vs_unsupervised.svg)
+![Supervised vs Unsupervised Data Representation](./assets/images/supervised_vs_unsupervised.png)
 
 ---
 
