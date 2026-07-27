@@ -21,13 +21,12 @@ Imagine standing at a high point on a hilly landscape (the cost surface $J(w,b)$
 
 For Linear Regression with parameters $w$ (weight) and $b$ (bias):
 
-$$\text{repeat until convergence: } \{$$
-
-$$w = w - \alpha \frac{\partial}{\partial w} J(w,b)$$
-
-$$b = b - \alpha \frac{\partial}{\partial b} J(w,b)$$
-
-$$\}$$
+$$\begin{aligned}
+&\text{repeat until convergence: } \{ \\
+&\quad w = w - \alpha \frac{\partial}{\partial w} J(w,b) \\
+&\quad b = b - \alpha \frac{\partial}{\partial b} J(w,b) \\
+&\}
+\end{aligned}$$
 
 ### Parameter Breakdown:
 
@@ -87,7 +86,7 @@ The derivative term $\frac{\partial}{\partial w} J(w)$ provides the direction of
   * Guaranteed to converge, but **extremely slow** (requires millions of iterations).
 * **$\alpha$ Too Large (e.g., $1.5$)**:
   * Overshoots the minimum and steps across the valley.
-  * **Fails to converge** and may **diverge** (cost $J$ increases and bouncers higher).
+  * **Fails to converge** and may **diverge** (cost $J$ increases and bounces higher).
 * **Optimal $\alpha$ (e.g., $0.01$)**:
   * Smooth, efficient convergence to the minimum.
 
@@ -107,13 +106,12 @@ $$\frac{\partial}{\partial b} J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}
 
 ### Full Batch Gradient Descent Algorithm for Linear Regression:
 
-$$\text{repeat until convergence: } \{$$
-
-$$w = w - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right) x^{(i)}$$
-
-$$b = b - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right)$$
-
-$$\}$$
+$$\begin{aligned}
+&\text{repeat until convergence: } \{ \\
+&\quad w = w - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right) x^{(i)} \\
+&\quad b = b - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right) \\
+&\}
+\end{aligned}$$
 
 ---
 
