@@ -134,6 +134,15 @@ $$\}$$
 
 ---
 
+## 📦 7. Batch Gradient Descent Definition
+
+* **Definition**: The term **"Batch" Gradient Descent** refers to the fact that at **every single step of gradient descent, the algorithm looks at ALL $m$ training examples** in the dataset to compute the summation ($\sum_{i=1}^{m}$).
+* **Key Characteristic**:
+  $$\text{Uses the entire batch of } m \text{ training examples at each step.}$$
+* *Name Origin*: DeepLearning.AI's flagship newsletter *"The Batch"* was named after this fundamental machine learning concept!
+
+---
+
 ## 🎯 Summary Checklist
 
 - [x] **Update Equations**: $w = w - \alpha \frac{\partial J}{\partial w}$ and $b = b - \alpha \frac{\partial J}{\partial b}$.
@@ -142,3 +151,4 @@ $$\}$$
 - [x] **Learning Rate ($\alpha$)**: Too small = slow; too large = overshoot/diverge; optimal = fast convergence.
 - [x] **Linear Regression Derivatives**: Derivative w.r.t $w$ includes factor $x^{(i)}$; derivative w.r.t $b$ omits $x^{(i)}$.
 - [x] **Convexity**: MSE cost function has 1 single global minimum, ensuring reliable convergence.
+- [x] **Batch Gradient Descent**: Uses all $m$ training examples at every iteration.
