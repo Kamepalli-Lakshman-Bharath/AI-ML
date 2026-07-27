@@ -32,6 +32,14 @@ Welcome to the **AI/ML Learning Hub**! This documentation collection contains st
   * Standard ML Notation Reference ($x, y, m, (x^{(i)}, y^{(i)})$)
   * Index vs Exponent Superscript Notation Rule
 
+* 📄 **[05. Cost Function & Intuition](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/05-cost-function.md)**
+  * Squared Error Cost Function Formula ($J(w,b) = \frac{1}{2m}\sum (f(x^{(i)}) - y^{(i)})^2$)
+  * Why $\frac{1}{2m}$? (Averaging & derivative calculus simplification)
+  * Visualizing 1D Parameter $w$: Tracing out the U-shaped Parabola
+  * 3D Surface Plots ("Soup Bowl" / Hammock shape)
+  * 2D Contour Plots (Level curves & Concentric ellipses)
+  * Finding the Global Minimum $\min_{w,b} J(w,b)$
+
 ---
 
 ## 💡 How to Use These Notes
