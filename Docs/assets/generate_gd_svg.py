@@ -1,0 +1,68 @@
+import os
+
+assets_dir = "/Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/assets/images"
+os.makedirs(assets_dir, exist_ok=True)
+
+gd_svg = '''<svg viewBox="0 0 680 340" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #e0e0e0; border-radius:8px; padding:16px; font-family: Arial, sans-serif;">
+  <!-- Title -->
+  <text x="340" y="30" fill="#0070f3" font-size="20" font-weight="bold" text-anchor="middle">Gradient Descent: Steepest Descent & Local Minima</text>
+
+  <!-- Left Side: Convex Bowl (Linear Regression) -->
+  <g transform="translate(20, 20)">
+    <text x="140" y="30" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Convex Surface (Single Minimum)</text>
+    
+    <!-- Axes -->
+    <line x1="40" y1="240" x2="250" y2="240" stroke="#000" stroke-width="2"/>
+    <line x1="40" y1="240" x2="40" y2="50" stroke="#000" stroke-width="2"/>
+    <text x="145" y="270" font-size="12" font-weight="bold" text-anchor="middle">Parameter (w)</text>
+    <text x="20" y="145" font-size="12" font-weight="bold" transform="rotate(-90 20,145)" text-anchor="middle">Cost J(w,b)</text>
+
+    <!-- Bowl Path -->
+    <path d="M 50 70 Q 140 240 230 70" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="4"/>
+
+    <!-- Path Steps -->
+    <circle cx="55" cy="80" r="5" fill="#e11d48"/>
+    <text x="55" y="65" font-size="11" font-weight="bold" fill="#e11d48" text-anchor="middle">Start (w=0, b=0)</text>
+
+    <!-- Step arrows -->
+    <path d="M 55 80 L 80 130 L 105 175 L 125 205 L 140 215" fill="none" stroke="#0070f3" stroke-width="2.5" stroke-dasharray="3,3"/>
+
+    <!-- Global Min -->
+    <circle cx="140" cy="215" r="6" fill="#16a34a"/>
+    <text x="140" y="235" font-size="12" font-weight="bold" fill="#16a34a" text-anchor="middle">Global Minimum</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="320" y1="40" x2="320" y2="300" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="4"/>
+
+  <!-- Right Side: Non-Convex Surface (Multiple Valleys / Local Minima) -->
+  <g transform="translate(340, 20)">
+    <text x="160" y="30" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Non-Convex Surface (Multiple Valleys)</text>
+    
+    <!-- Axes -->
+    <line x1="40" y1="240" x2="290" y2="240" stroke="#000" stroke-width="2"/>
+    <line x1="40" y1="240" x2="40" y2="50" stroke="#000" stroke-width="2"/>
+    <text x="165" y="270" font-size="12" font-weight="bold" text-anchor="middle">Parameter w</text>
+    <text x="20" y="145" font-size="12" font-weight="bold" transform="rotate(-90 20,145)" text-anchor="middle">Cost J(w,b)</text>
+
+    <!-- Hilly Landscape Curve -->
+    <path d="M 50 80 Q 90 230 130 200 Q 170 80 210 230 Q 250 180 280 70" fill="none" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Path 1 (Starts Left -> Minimum 1) -->
+    <circle cx="65" cy="115" r="5" fill="#9333ea"/>
+    <path d="M 65 115 L 75 150 L 85 185 L 95 205" fill="none" stroke="#9333ea" stroke-width="2.5"/>
+    <circle cx="95" cy="205" r="5" fill="#9333ea"/>
+    <text x="95" y="225" font-size="11" font-weight="bold" fill="#9333ea" text-anchor="middle">Local Min 1</text>
+
+    <!-- Path 2 (Starts Right -> Minimum 2) -->
+    <circle cx="170" cy="100" r="5" fill="#d97706"/>
+    <path d="M 170 100 L 180 145 L 195 190 L 208 215" fill="none" stroke="#d97706" stroke-width="2.5"/>
+    <circle cx="208" cy="215" r="5" fill="#d97706"/>
+    <text x="208" y="235" font-size="11" font-weight="bold" fill="#d97706" text-anchor="middle">Local Min 2</text>
+  </g>
+</svg>'''
+
+with open(os.path.join(assets_dir, "gradient_descent_intuition.svg"), "w") as f:
+    f.write(gd_svg)
+
+print("Generated gradient_descent_intuition.svg successfully!")

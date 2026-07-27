@@ -1,0 +1,45 @@
+<svg viewBox="0 0 680 300" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border:1px solid #e0e0e0; border-radius:8px; padding:16px; font-family: Arial, sans-serif;">
+  <text x="340" y="30" fill="#0070f3" font-size="18" font-weight="bold" text-anchor="middle">Gradient Descent: Simultaneous Update vs. Incorrect Update</text>
+
+  <!-- Left: Correct Simultaneous Update -->
+  <g transform="translate(20, 20)">
+    <rect x="10" y="35" width="290" height="225" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <text x="155" y="60" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle">✓ CORRECT: Simultaneous Update</text>
+    
+    <!-- Step 1 -->
+    <rect x="25" y="75" width="260" height="35" rx="4" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+    <text x="35" y="97" font-size="12" font-family="monospace" fill="#166534">tmp_w = w - α * ∂J(w,b)/∂w</text>
+
+    <!-- Step 2 -->
+    <rect x="25" y="120" width="260" height="35" rx="4" fill="#ffffff" stroke="#86efac" stroke-width="1.5"/>
+    <text x="35" y="142" font-size="12" font-family="monospace" fill="#166534">tmp_b = b - α * ∂J(w,b)/∂b</text>
+
+    <!-- Step 3 -->
+    <rect x="25" y="165" width="260" height="35" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="35" y="187" font-size="12" font-family="monospace" font-weight="bold" fill="#14532d">w = tmp_w  |  b = tmp_b</text>
+
+    <text x="155" y="225" font-size="11" font-weight="bold" fill="#15803d" text-anchor="middle">Both w &amp; b calculated from old parameters</text>
+    <text x="155" y="240" font-size="11" fill="#166534" text-anchor="middle">before updating either variable</text>
+  </g>
+
+  <!-- Right: Incorrect Sequential Update -->
+  <g transform="translate(350, 20)">
+    <rect x="10" y="35" width="290" height="225" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+    <text x="155" y="60" font-size="14" font-weight="bold" fill="#be123c" text-anchor="middle">❌ INCORRECT: Non-Simultaneous</text>
+
+    <!-- Step 1 -->
+    <rect x="25" y="75" width="260" height="35" rx="4" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+    <text x="35" y="97" font-size="12" font-family="monospace" fill="#9f1239">tmp_w = w - α * ∂J(w,b)/∂w</text>
+
+    <!-- Step 2 -->
+    <rect x="25" y="120" width="260" height="35" rx="4" fill="#fecdd3" stroke="#e11d48" stroke-width="1.5"/>
+    <text x="35" y="142" font-size="12" font-family="monospace" font-weight="bold" fill="#881337">w = tmp_w  (Updated early!)</text>
+
+    <!-- Step 3 -->
+    <rect x="25" y="165" width="260" height="35" rx="4" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5"/>
+    <text x="35" y="187" font-size="12" font-family="monospace" fill="#9f1239">b = b - α * ∂J(new_w,b)/∂b</text>
+
+    <text x="155" y="225" font-size="11" font-weight="bold" fill="#be123c" text-anchor="middle">Uses NEW w inside ∂J for b calculation!</text>
+    <text x="155" y="240" font-size="11" fill="#9f1239" text-anchor="middle">Violates standard gradient descent logic</text>
+  </g>
+</svg>
