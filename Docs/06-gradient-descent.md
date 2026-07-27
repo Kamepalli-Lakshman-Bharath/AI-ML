@@ -13,20 +13,17 @@ Imagine standing at a high point on a hilly landscape (the cost surface $J(w,b)$
 3. **Take a small step ($\alpha$)** in that direction.
 4. **Repeat steps 1–3** until you reach the bottom of the valley (a minimum where slope = 0).
 
-![Gradient Descent Intuition](./assets/images/gradient_descent_intuition.svg)
+![Gradient Descent Intuition](assets/images/gradient_descent_intuition.svg)
 
 ---
 
 ## 📐 2. Gradient Descent Update Equations
 
-For Linear Regression with parameters $w$ (weight) and $b$ (bias):
+For Linear Regression with parameters $w$ (weight) and $b$ (bias), **repeat until convergence**:
 
-$$\begin{aligned}
-&\text{repeat until convergence: } \{ \\
-&\quad w = w - \alpha \frac{\partial}{\partial w} J(w,b) \\
-&\quad b = b - \alpha \frac{\partial}{\partial b} J(w,b) \\
-&\}
-\end{aligned}$$
+$$w = w - \alpha \frac{\partial}{\partial w} J(w,b)$$
+
+$$b = b - \alpha \frac{\partial}{\partial b} J(w,b)$$
 
 ### Parameter Breakdown:
 
@@ -43,7 +40,7 @@ $$\begin{aligned}
 
 When implementing Gradient Descent in code, **both parameters $w$ and $b$ MUST be updated simultaneously** using their pre-update values.
 
-![Simultaneous Updates vs Incorrect Updates](./assets/images/simultaneous_updates.svg)
+![Simultaneous Updates vs Incorrect Updates](assets/images/simultaneous_updates.svg)
 
 ### Correct vs. Incorrect Python Code:
 
@@ -65,7 +62,7 @@ b = b - alpha * d_db  # Incorrectly uses NEW w inside derivative for b
 
 The derivative term $\frac{\partial}{\partial w} J(w)$ provides the direction of movement toward the minimum:
 
-![Derivative Slope Intuition](./assets/images/derivative_slope_intuition.svg)
+![Derivative Slope Intuition](assets/images/derivative_slope_intuition.svg)
 
 | Initial Position | Tangent Slope ($\frac{\partial J}{\partial w}$) | Gradient Update Formula | Parameter Movement | Effect on Cost $J(w)$ |
 | :--- | :--- | :--- | :--- | :--- |
@@ -79,7 +76,7 @@ The derivative term $\frac{\partial}{\partial w} J(w)$ provides the direction of
 
 ## ⚡ 5. Learning Rate ($\alpha$) Choice & Dynamics
 
-![Effects of Learning Rate Alpha](./assets/images/learning_rate_dynamics.svg)
+![Effects of Learning Rate Alpha](assets/images/learning_rate_dynamics.svg)
 
 * **$\alpha$ Too Small (e.g., $0.0000001$)**:
   * Takes minuscule baby steps.
@@ -104,14 +101,11 @@ $$\frac{\partial}{\partial b} J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}
 
 *(Note: The factor of 2 from differentiating $(f-y)^2$ cancels out neatly with the $\frac{1}{2}$ in $\frac{1}{2m}$!)*
 
-### Full Batch Gradient Descent Algorithm for Linear Regression:
+### Full Batch Gradient Descent Algorithm for Linear Regression (Repeat until convergence):
 
-$$\begin{aligned}
-&\text{repeat until convergence: } \{ \\
-&\quad w = w - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right) x^{(i)} \\
-&\quad b = b - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right) \\
-&\}
-\end{aligned}$$
+$$w = w - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right) x^{(i)}$$
+
+$$b = b - \alpha \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right)$$
 
 ---
 

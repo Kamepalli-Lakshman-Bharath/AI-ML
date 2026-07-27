@@ -45,7 +45,7 @@ $$f_w(x) = w \cdot x \implies J(w) = \frac{1}{2m} \sum_{i=1}^{m} \left( w \cdot 
 
 Because $b=0$, the fitted line always passes through the origin $(0,0)$, and $J(w)$ depends solely on parameter $w$.
 
-![Cost Function Intuition](./assets/images/cost_function_intuition.svg)
+![Cost Function Intuition](assets/images/cost_function_intuition.svg)
 
 ---
 
@@ -77,7 +77,7 @@ When both parameters $w$ (slope) and $b$ (y-intercept) are active, $J(w,b)$ beco
 
 To easily inspect 3D cost surfaces on 2D screens, we use **Contour Plots** (identical to topographical elevation maps used in geography, e.g. Mount Fuji).
 
-![Contour Plot of Cost Function](./assets/images/contour_plot.svg)
+![Contour Plot of Cost Function](assets/images/contour_plot.svg)
 
 ### Mapping Parameter Choices to Contour Positions:
 
