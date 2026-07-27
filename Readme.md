@@ -38,7 +38,11 @@ Welcome to the **AI/ML Learning Hub**! This documentation collection contains st
   * Visualizing 1D Parameter $w$: Tracing out the U-shaped Parabola
   * 3D Surface Plots ("Soup Bowl" / Hammock shape)
   * 2D Contour Plots (Level curves & Concentric ellipses)
-  * Finding the Global Minimum $\min_{w,b} J(w,b)$
+  * Mapping Contour Points $(w,b)$ to Model Fits
+  * Transition to Automated Optimization via Gradient Descent
+
+* 📄 **[06. Gradient Descent Algorithm](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/06-gradient-descent.md)**
+  * Automated optimization of parameters $w$ and $b$ to minimize cost $J(w,b)$.
 
 ---
 
