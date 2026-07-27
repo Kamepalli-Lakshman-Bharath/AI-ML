@@ -79,20 +79,22 @@ To easily inspect 3D cost surfaces on 2D screens, we use **Contour Plots** (iden
 
 ![Contour Plot of Cost Function](./assets/images/contour_plot.svg)
 
-### Key Properties of Contour Plots:
-1. **Contour Lines (Ellipses)**: Formed by taking horizontal slices of the 3D bowl at fixed heights.
-2. **Constant Cost**: **All points on the same contour ellipse have the exact same cost value $J(w,b)$**, even though they represent different $(w,b)$ parameter combinations.
-3. **The Global Minimum**: The optimal parameter values $(w^*, b^*)$ that minimize error $J(w,b)$ lie at the **center of the innermost concentric ellipse** (the deepest point at the bottom of the bowl).
+### Mapping Parameter Choices to Contour Positions:
+
+| Parameter Choice $(w, b)$ | Line Behavior $f(x) = wx + b$ | Contour Location | Cost Value $J(w,b)$ | Fit Quality |
+| :--- | :--- | :--- | :--- | :--- |
+| **$w = -0.15, b = 800$** | Negative slope, $y$-intercept at 800 | Far outer contour line | Extremely High | Terrible (Severe underestimation) |
+| **$w = 0.0, b = 360$** | Flat horizontal line | Outer contour line | High | Poor |
+| **Optimal $(w^*, b^*)$** | Line passes directly through data points | **Center of innermost ellipse** | **Lowest Possible ($J_{\min}$)** | **Best Fit** |
 
 ---
 
-## 🎯 6. The Core Optimization Goal
+## ⚡ 6. Transition to Automated Optimization: Gradient Descent
 
-The fundamental objective of training a Linear Regression model is finding the parameters $(w, b)$ that **minimize** $J(w,b)$:
+Manually inspecting contour plots or guessing parameter values $(w,b)$ is impractical for complex models.
 
-$$\min_{w, b} J(w,b)$$
-
-* When $J(w,b)$ is at its lowest point (the center of the contour plot), the resulting line $f_{w,b}(x) = wx + b$ fits the training data points as accurately as possible.
+* **Need for Automation**: Real-world AI models have dozens, thousands, or billions of parameters.
+* **The Solution — Gradient Descent**: An algorithm that automatically calculates parameter updates in code to navigate the cost surface step-by-step toward the global minimum $\min_{w,b} J(w,b)$.
 
 ---
 
@@ -103,3 +105,4 @@ $$\min_{w, b} J(w,b)$$
 - [x] **3D Surface**: Full model cost function forms a 3D "soup bowl" surface plot.
 - [x] **2D Contour Plot**: Horizontal slices of the bowl create concentric ellipses where points on the same ellipse share identical cost $J(w,b)$.
 - [x] **Global Minimum**: Located at the center of the innermost ellipse.
+- [x] **Gradient Descent**: The automated algorithm used to find parameters $(w,b)$ that minimize $J(w,b)$.
