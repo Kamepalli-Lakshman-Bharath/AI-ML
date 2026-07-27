@@ -8,7 +8,7 @@
 
 Supervised learning operates in two distinct stages: **Training** and **Inference**.
 
-![Supervised Learning Model Process](assets/images/supervised_learning_flow.svg)
+![Supervised Learning Model Process](./assets/images/supervised_learning_flow.svg)
 
 1. **Stage 1 (Training)**: The training dataset containing features ($x$) and target labels ($y$) is fed to the **Learning Algorithm**. The algorithm outputs a **Model Function $f$**.
 2. **Stage 2 (Inference)**: When a new feature $x$ (e.g. house size = $1250\text{ sq ft}$) is passed into the model function $f(x)$, it outputs an estimated prediction **$\hat{y}$** ("y-hat").
@@ -46,7 +46,7 @@ $$f_{w,b}(x) = w \cdot x + b \quad \text{or simply} \quad f(x) = wx + b$$
 * **Variate**: Variable.
 * **Definition**: Linear regression with **a single input variable/feature $x$** (e.g., size of house).
 
-![Linear Regression Model](assets/images/linear_regression_model.svg)
+![Linear Regression Model](./assets/images/linear_regression_model.svg)
 
 ### Inference Example:
 For a client's house with size $x = 1250\text{ sq ft}$:
