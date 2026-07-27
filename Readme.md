@@ -43,6 +43,31 @@ Welcome to the **AI/ML Learning Hub**! This documentation collection contains st
 
 * 📄 **[06. Gradient Descent Algorithm](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/06-gradient-descent.md)**
   * Automated optimization of parameters $w$ and $b$ to minimize cost $J(w,b)$.
+  * Derivative slope intuition, learning rate dynamics, and automatic step-size shrinking.
+
+* 📄 **[07. Multiple Linear Regression & Vectorization](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/07-multiple-linear-regression.md)**
+  * Multiple features notation ($n, x_j^{(i)}, \vec{x}^{(i)}$) & parameter interpretation
+  * Hypothesis in vector dot product form $f(\vec{x}) = \vec{w} \cdot \vec{x} + b$
+  * Vectorization with NumPy (`np.dot(w, x) + b`) and SIMD hardware parallelization
+
+* 📄 **[08. Feature Scaling, Learning Rate Tuning & Feature Engineering](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/08-feature-scaling-and-polynomial-regression.md)**
+  * Vectorized Gradient Descent updates & Normal Equation $(X^T X)^{-1} X^T \vec{y}$
+  * Feature Scaling techniques (Divide by Max, Mean Normalization, Z-score Standardization)
+  * Learning Curve diagnostics ($J$ vs iterations) & systematic $\alpha$ search
+  * Feature Engineering & Polynomial Regression ($x^2, x^3, \sqrt{x}$) with mandatory scaling
+
+* 📄 **[09. Logistic Regression Model, Decision Boundaries & Loss Function](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/09-logistic-regression-model.md)**
+  * Binary classification ($y \in \{0, 1\}$) & why linear regression fails
+  * Sigmoid activation $g(z) = \frac{1}{1 + e^{-z}}$ & probability output interpretation
+  * Decision boundaries ($z=0 \implies \vec{w} \cdot \vec{x} + b = 0$) & linear vs. polynomial shapes
+  * Non-convexity of MSE for classification & Binary Cross-Entropy Loss derivation
+
+* 📄 **[10. Overfitting, Underfitting & Regularization](file:///Users/lakshmanbharathkomepalli/Lakshman/my_space/AI-ML/Docs/10-overfitting-and-regularization.md)**
+  * Generalization definition, Goldilocks analogy & High Bias vs. High Variance
+  * 3 Remedies for Overfitting (More data, Feature selection, Regularization)
+  * Regularized Cost Function formula & $\lambda$ parameter trade-offs
+  * Weight Decay factor $(1 - \alpha \frac{\lambda}{m})$ in gradient descent updates
+  * Decision boundary smoothing & Course 1 completion milestone
 
 ---
 
